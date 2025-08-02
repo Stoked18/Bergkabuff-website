@@ -1,13 +1,134 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Viewport für Mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta-Tags -->
+  <title>Bergkabuff - 50 Lebensziele öffentlich umsetzen | Bucketlist Journey</title>
+  <meta name="description"
+    content="Folge meiner Reise: 50 Lebensziele öffentlich geplant und systematisch umgesetzt. Von Tech-Projekten über Reisen bis zu persönlichen Challenges - alle Träume werden Realität." />
+  <meta name="keywords"
+    content="Bucketlist, Lebensziele, YouTube, Bergkabuff, Träume verwirklichen, Tech-Projekte, Reisen, persönliche Entwicklung, Goals, Motivation" />
+  <meta name="author" content="Bergkabuff" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="German" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://bergkabuff.com/" />
+  <meta property="og:title" content="Bergkabuff - 50 Lebensziele öffentlich umsetzen" />
+  <meta property="og:description"
+    content="Folge meiner Reise: 50 Lebensziele öffentlich geplant und systematisch umgesetzt. Von Tech-Projekten über Reisen bis zu persönlichen Challenges." />
+  <meta property="og:image" content="https://bergkabuff.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Bergkabuff - Making Dreams Reality" />
+  <meta property="og:site_name" content="Bergkabuff" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://bergkabuff.com/" />
+  <meta name="twitter:title" content="Bergkabuff - 50 Lebensziele öffentlich umsetzen" />
+  <meta name="twitter:description"
+    content="Folge meiner Reise: 50 Lebensziele öffentlich geplant und systematisch umgesetzt. Träume werden Realität!" />
+  <meta name="twitter:image" content="https://bergkabuff.com/twitter-image.jpg" />
+  <meta name="twitter:image:alt" content="Bergkabuff - Making Dreams Reality" />
+  <meta name="twitter:creator" content="@bergkabuff" />
+  <meta name="twitter:site" content="@bergkabuff" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Theme Color für Mobile Browser -->
+  <meta name="theme-color" content="#007aff" />
+  <meta name="msapplication-TileColor" content="#007aff" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bergkabuff.com/" />
+
+  <!-- Preconnect für Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Bergkabuff",
+      "url": "https://bergkabuff.com",
+      "description": "50 Lebensziele öffentlich geplant und systematisch umgesetzt",
+      "author": {
+        "@type": "Person",
+        "name": "Bergkabuff",
+        "url": "https://bergkabuff.com"
+      },
+      "sameAs": [
+        "https://youtube.com/@bergkabuff"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://bergkabuff.com/#goals?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+  <!-- Additional Structured Data für Goals -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Bergkabuff Lebensziele",
+      "description": "50 Lebensziele systematisch dokumentiert und umgesetzt",
+      "numberOfItems": 50,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Website erstellen und veröffentlichen",
+          "description": "Vollständige Entwicklung einer interaktiven Website mit React und modernem Design"
+        },
+        {
+          "@type": "ListItem", 
+          "position": 2,
+          "name": "YouTube Kanal starten",
+          "description": "Professioneller YouTube-Kanal mit regelmäßigen Videos über die Bucketlist-Reise"
+        }
+      ]
+    }
+    </script>
+
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+
+  <!-- Hier kommt später Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

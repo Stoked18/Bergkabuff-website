@@ -15,7 +15,7 @@ Bergkabuff transforms the traditional bucket list concept into an interactive, s
 
 ## ✨ Current Features
 
-- 🎯 **Modern Landing Page** - Glassmorphism design with gradient backgrounds
+- 🎯 **Apple-Inspired Design** - Minimal black/white layout inspired by iPhone product pages
 - 📊 **2025 Goals Preview** - Real bucket list items with status tracking
 - 📱 **Responsive Design** - Works perfectly on desktop and mobile
 - ⚡ **Lightning Fast** - Built with Vite for optimal performance
