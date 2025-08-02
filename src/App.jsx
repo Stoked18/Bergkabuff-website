@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // CSS Reset für Browser-Standards
 const globalStyles = `
@@ -23,6 +23,20 @@ if (typeof document !== "undefined") {
 
 // YouTube Modal Komponente
 const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
+  // Background-Scroll deaktivieren wenn Modal offen ist
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    // Cleanup beim Unmount
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -38,56 +52,76 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "20px",
+        padding: window.innerWidth > 768 ? "20px" : "10px",
+        overflow: "auto",
       }}
     >
       <div
         style={{
           backgroundColor: "white",
           borderRadius: "18px",
-          maxWidth: "900px",
+          maxWidth: window.innerWidth > 768 ? "900px" : "95vw",
           width: "100%",
-          maxHeight: "90vh",
+          maxHeight: window.innerWidth > 768 ? "90vh" : "95vh",
           overflow: "hidden",
+          display: "flex",
+          flexDirection: "column",
+          margin: "auto",
         }}
       >
-        {/* Modal Header */}
+        {/* Modal Header - Mobile-optimiert */}
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            padding: "24px",
+            padding: window.innerWidth > 768 ? "24px" : "16px",
             borderBottom: "1px solid #d2d2d7",
+            flexShrink: 0,
           }}
         >
           <h3
             style={{
-              fontSize: "20px",
+              fontSize: window.innerWidth > 768 ? "20px" : "18px",
               fontWeight: "600",
               margin: 0,
               color: "#1d1d1f",
+              paddingRight: "20px",
             }}
           >
-            Das Bergkabuff Projekt - Meine Story
+            {window.innerWidth > 480
+              ? "Das Bergkabuff Projekt - Meine Story"
+              : "Bergkabuff Story"}
           </h3>
           <button
             onClick={onClose}
             style={{
               background: "none",
               border: "none",
-              fontSize: "24px",
+              fontSize: "28px",
               color: "#86868b",
               cursor: "pointer",
               padding: "4px",
+              minWidth: "32px",
+              minHeight: "32px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
             }}
           >
             ×
           </button>
         </div>
 
-        {/* Video Content */}
-        <div style={{ padding: "24px" }}>
+        {/* Scrollable Content */}
+        <div
+          style={{
+            padding: window.innerWidth > 768 ? "24px" : "16px",
+            overflow: "auto",
+            flex: 1,
+          }}
+        >
           {videoId === "dQw4w9WgXcQ" ? (
             // Placeholder für dein kommendes Video
             <div
@@ -100,13 +134,21 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
                 justifyContent: "center",
                 flexDirection: "column",
                 textAlign: "center",
-                padding: "40px",
+                padding: window.innerWidth > 768 ? "40px" : "20px",
+                marginBottom: "20px",
               }}
             >
-              <div style={{ fontSize: "48px", marginBottom: "16px" }}>🎬</div>
+              <div
+                style={{
+                  fontSize: window.innerWidth > 768 ? "48px" : "36px",
+                  marginBottom: "16px",
+                }}
+              >
+                🎬
+              </div>
               <h4
                 style={{
-                  fontSize: "24px",
+                  fontSize: window.innerWidth > 768 ? "24px" : "20px",
                   fontWeight: "600",
                   color: "#1d1d1f",
                   marginBottom: "8px",
@@ -119,6 +161,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
                   color: "#86868b",
                   marginBottom: "24px",
                   lineHeight: "1.4",
+                  fontSize: window.innerWidth > 768 ? "16px" : "14px",
                 }}
               >
                 Das erste Bergkabuff-Video ist gerade in Produktion.
@@ -126,21 +169,23 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
                 Hier wird es eingebettet, sobald es auf YouTube live ist.
               </p>
 
-              {/* Vorschau: Einbettungscode */}
-              <div
-                style={{
-                  backgroundColor: "#f5f5f7",
-                  border: "2px dashed #d2d2d7",
-                  borderRadius: "8px",
-                  padding: "16px",
-                  textAlign: "left",
-                  fontFamily: "monospace",
-                  fontSize: "12px",
-                  color: "#86868b",
-                  marginBottom: "24px",
-                }}
-              >
-                {`<iframe 
+              {/* Einbettungscode - versteckt auf sehr kleinen Screens */}
+              {window.innerWidth > 480 && (
+                <div
+                  style={{
+                    backgroundColor: "#f5f5f7",
+                    border: "2px dashed #d2d2d7",
+                    borderRadius: "8px",
+                    padding: "16px",
+                    textAlign: "left",
+                    fontFamily: "monospace",
+                    fontSize: "11px",
+                    color: "#86868b",
+                    marginBottom: "24px",
+                    overflow: "auto",
+                  }}
+                >
+                  {`<iframe 
   width="100%" 
   height="100%"
   src="https://www.youtube.com/embed/DEINE_VIDEO_ID"
@@ -148,8 +193,10 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
   frameborder="0"
   allowfullscreen
 ></iframe>`}
-              </div>
+                </div>
+              )}
 
+              {/* YouTube-Button - Mobile-optimiert */}
               <a
                 href="https://youtube.com/@bergkabuff"
                 target="_blank"
@@ -157,14 +204,16 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
                 style={{
                   backgroundColor: "#ff3b30",
                   color: "white",
-                  padding: "12px 24px",
+                  padding: window.innerWidth > 768 ? "12px 24px" : "14px 20px",
                   borderRadius: "22px",
                   textDecoration: "none",
-                  fontSize: "14px",
+                  fontSize: window.innerWidth > 768 ? "14px" : "16px",
                   fontWeight: "500",
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
+                  minHeight: "44px",
+                  justifyContent: "center",
                 }}
               >
                 📺 YouTube-Kanal besuchen
@@ -172,7 +221,12 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
             </div>
           ) : (
             // Echtes YouTube Video (wenn du eine Video-ID hast)
-            <div style={{ aspectRatio: "16/9" }}>
+            <div
+              style={{
+                aspectRatio: "16/9",
+                marginBottom: "20px",
+              }}
+            >
               <iframe
                 width="100%"
                 height="100%"
@@ -187,10 +241,10 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
           )}
 
           {/* Video Details */}
-          <div style={{ marginTop: "24px" }}>
+          <div>
             <h4
               style={{
-                fontSize: "16px",
+                fontSize: window.innerWidth > 768 ? "16px" : "15px",
                 fontWeight: "600",
                 color: "#1d1d1f",
                 marginBottom: "12px",
@@ -201,9 +255,10 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
             <ul
               style={{
                 color: "#86868b",
-                fontSize: "14px",
+                fontSize: window.innerWidth > 768 ? "14px" : "13px",
                 lineHeight: "1.6",
                 paddingLeft: "20px",
+                marginBottom: "16px",
               }}
             >
               <li>Warum das Bergkabuff-Projekt entstanden ist</li>
@@ -217,10 +272,10 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
               style={{
                 backgroundColor: "#007aff",
                 color: "white",
-                padding: "16px",
+                padding: window.innerWidth > 768 ? "16px" : "14px",
                 borderRadius: "12px",
-                marginTop: "16px",
-                fontSize: "14px",
+                fontSize: window.innerWidth > 768 ? "14px" : "13px",
+                lineHeight: "1.5",
               }}
             >
               <strong>💡 Tipp:</strong> Abonniere den Kanal, um kein Update zu
