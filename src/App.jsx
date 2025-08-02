@@ -839,7 +839,7 @@ function App() {
         width: "100vw",
       }}
     >
-      {/* Header */}
+      {/* Header - Mobile-optimiert */}
       <header
         style={{
           borderBottom: "1px solid #d2d2d7",
@@ -854,33 +854,45 @@ function App() {
           style={{
             maxWidth: "1800px",
             margin: "0 auto",
-            padding: "0 40px",
+            padding: "0 20px", // Reduziert von 40px
             width: "100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: "44px",
+            height: "56px", // Erhöht von 44px für Mobile
+            minHeight: "56px",
           }}
         >
           <h1
             style={{
-              fontSize: "21px",
+              fontSize: "18px", // Reduziert von 21px für Mobile
               fontWeight: "600",
               margin: 0,
               letterSpacing: "-0.022em",
+              flexShrink: 0, // Verhindert Zusammenquetschen
             }}
           >
-            Bergkabuff
+            🏔️ Bergkabuff
           </h1>
-          <nav style={{ display: "flex", gap: "32px", alignItems: "center" }}>
+
+          {/* Mobile-optimierte Navigation */}
+          <nav
+            style={{
+              display: "flex",
+              gap: window.innerWidth > 768 ? "32px" : "16px", // Responsive Gap
+              alignItems: "center",
+              flexShrink: 0, // Verhindert Zusammenquetschen
+            }}
+          >
             <a
               href="#goals"
               style={{
                 textDecoration: "none",
                 color: "#1d1d1f",
-                fontSize: "12px",
+                fontSize: window.innerWidth > 768 ? "12px" : "11px", // Responsive Font
                 fontWeight: "400",
                 opacity: 0.8,
+                whiteSpace: "nowrap", // Verhindert Umbruch
               }}
             >
               Goals
@@ -890,14 +902,17 @@ function App() {
               style={{
                 textDecoration: "none",
                 color: "#1d1d1f",
-                fontSize: "12px",
+                fontSize: window.innerWidth > 768 ? "12px" : "11px", // Responsive Font
                 fontWeight: "400",
                 opacity: 0.8,
+                whiteSpace: "nowrap", // Verhindert Umbruch
+                display: window.innerWidth > 480 ? "block" : "none", // Versteckt auf sehr kleinen Screens
               }}
             >
               About
             </a>
-            {/* NEU: YouTube Button im Header */}
+
+            {/* YouTube Button - Mobile-optimiert */}
             <button
               onClick={() => setShowYouTubeModal(true)}
               style={{
@@ -905,21 +920,23 @@ function App() {
                 color: "white",
                 border: "none",
                 borderRadius: "20px",
-                padding: "8px 16px",
-                fontSize: "12px",
+                padding: window.innerWidth > 768 ? "8px 16px" : "6px 12px", // Responsive Padding
+                fontSize: window.innerWidth > 768 ? "12px" : "11px", // Responsive Font
                 fontWeight: "500",
                 cursor: "pointer",
                 display: "flex",
                 alignItems: "center",
-                gap: "6px",
+                gap: "4px", // Reduziert von 6px
+                whiteSpace: "nowrap", // Verhindert Umbruch
+                flexShrink: 0, // Verhindert Zusammenquetschen
               }}
             >
-              📺 YouTube
+              📺 {window.innerWidth > 480 ? "YouTube" : "YT"}{" "}
+              {/* Kurze Version auf kleinen Screens */}
             </button>
           </nav>
         </div>
       </header>
-
       {/* Hero */}
       <section
         style={{
@@ -1006,7 +1023,6 @@ function App() {
           </div>
         </div>
       </section>
-
       {/* Goals Section */}
       <section
         id="goals"
@@ -1498,10 +1514,8 @@ function App() {
           </div>
         )}
       </section>
-
       {/* NEU: YouTube CTA Section - zwischen Goals und Footer eingefügt */}
       <YouTubeCTA onOpenVideo={() => setShowYouTubeModal(true)} />
-
       {/* Footer */}
       <footer
         style={{
@@ -1520,7 +1534,6 @@ function App() {
           Made with passion and determination
         </p>
       </footer>
-
       {/* NEU: YouTube Modal - am Ende eingefügt */}
       <YouTubeModal
         isOpen={showYouTubeModal}
