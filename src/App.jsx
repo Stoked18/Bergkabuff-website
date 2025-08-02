@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { useAnalytics } from "./hooks/useAnalytics"; // ← NEUE IMPORT
 
 // CSS Reset für Browser-Standards
 const globalStyles = `
@@ -829,12 +830,54 @@ const priorities = ["Alle Prioritäten", "Hoch", "Mittel", "Niedrig"];
 const statuses = ["Alle Status", "Abgeschlossen", "In Arbeit", "Geplant"];
 
 function App() {
+  // ← ANALYTICS HOOK HINZUFÜGEN
+  const {
+    trackGoalClick,
+    trackCategoryFilter,
+    trackSearch,
+    trackModalOpen,
+    trackExternalLink,
+  } = useAnalytics();
+
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [selectedPriority, setSelectedPriority] = useState("Alle Prioritäten");
   const [selectedStatus, setSelectedStatus] = useState("Alle Status");
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCard, setExpandedCard] = useState(null);
   const [showYouTubeModal, setShowYouTubeModal] = useState(false); // NEU: YouTube Modal State
+
+  // ← ERWEITERTE EVENT HANDLER MIT ANALYTICS
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    trackCategoryFilter(category); // Analytics Event
+  };
+
+  const handleSearchChange = (term) => {
+    setSearchTerm(term);
+    // Nur längere Suchbegriffe tracken (vermeidet Spam)
+    if (term.length > 2) {
+      trackSearch(term);
+    }
+  };
+
+  const handleGoalClick = (goal) => {
+    const wasExpanded = expandedCard === goal.id;
+    setExpandedCard(wasExpanded ? null : goal.id);
+
+    // Nur tracken wenn Ziel aufgeklappt wird (nicht beim Zuklappen)
+    if (!wasExpanded) {
+      trackGoalClick(goal.id, goal.title);
+    }
+  };
+
+  const handleYouTubeModalOpen = () => {
+    setShowYouTubeModal(true);
+    trackModalOpen("youtube_video"); // Analytics Event
+  };
+
+  const handleExternalLinkClick = (url, linkType) => {
+    trackExternalLink(url, linkType); // Analytics Event
+  };
 
   // Beschreibungen für die Ziele hinzufügen
   const getGoalDescription = (id) => {
@@ -967,9 +1010,9 @@ function App() {
               About
             </a>
 
-            {/* YouTube Button - Mobile-optimiert */}
+            {/* YouTube Button - Mobile-optimiert mit Analytics */}
             <button
-              onClick={() => setShowYouTubeModal(true)}
+              onClick={handleYouTubeModalOpen} // ← ANALYTICS EVENT
               style={{
                 backgroundColor: "#ff3b30",
                 color: "white",
@@ -992,6 +1035,7 @@ function App() {
           </nav>
         </div>
       </header>
+
       {/* Hero */}
       <section
         style={{
@@ -1078,6 +1122,7 @@ function App() {
           </div>
         </div>
       </section>
+
       {/* Goals Section */}
       <section
         id="goals"
@@ -1088,7 +1133,7 @@ function App() {
           width: "100%",
         }}
       >
-        {/* Search */}
+        {/* Search - ← ANALYTICS EVENT HANDLER ANGEPASST */}
         <div
           style={{
             maxWidth: "480px",
@@ -1100,7 +1145,7 @@ function App() {
             type="text"
             placeholder="Durchsuche deine Ziele..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)} // ← ANALYTICS
             style={{
               width: "100%",
               height: "44px",
@@ -1116,7 +1161,7 @@ function App() {
           />
         </div>
 
-        {/* Filter Kategorie */}
+        {/* Filter Kategorie - ← ANALYTICS EVENT HANDLER ANGEPASST */}
         <div
           style={{
             display: "flex",
@@ -1129,7 +1174,7 @@ function App() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => handleCategoryChange(cat)} // ← ANALYTICS
               style={{
                 padding: "8px 16px",
                 border:
@@ -1226,7 +1271,7 @@ function App() {
           </p>
         </div>
 
-        {/* Goals Grid */}
+        {/* Goals Grid - ← ANALYTICS EVENT HANDLER ANGEPASST */}
         <div
           style={{
             display: "grid",
@@ -1255,7 +1300,7 @@ function App() {
                   cursor: "pointer",
                   overflow: "hidden",
                 }}
-                onClick={() => setExpandedCard(isExpanded ? null : goal.id)}
+                onClick={() => handleGoalClick(goal)} // ← ANALYTICS
               >
                 <div
                   style={{
@@ -1569,8 +1614,10 @@ function App() {
           </div>
         )}
       </section>
+
       {/* NEU: YouTube CTA Section - zwischen Goals und Footer eingefügt */}
-      <YouTubeCTA onOpenVideo={() => setShowYouTubeModal(true)} />
+      <YouTubeCTA onOpenVideo={handleYouTubeModalOpen} />
+
       {/* Footer */}
       <footer
         style={{
@@ -1589,6 +1636,7 @@ function App() {
           Made with passion and determination
         </p>
       </footer>
+
       {/* NEU: YouTube Modal - am Ende eingefügt */}
       <YouTubeModal
         isOpen={showYouTubeModal}
