@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { useAnalytics } from "./hooks/useAnalytics"; // ← NEUE IMPORT
+import { goalHelpers } from "../lib/goalHelpers";
 
 // CSS Reset für Browser-Standards
 const globalStyles = `
@@ -21,8 +21,11 @@ if (typeof document !== "undefined") {
   styleSheet.innerText = globalStyles;
   document.head.appendChild(styleSheet);
 }
+// Ersetze die YouTubeModal Komponente in deiner App.jsx
 
-// YouTube Modal Komponente
+// WICHTIG: Füge useEffect zum Import hinzu:
+// import { useState, useEffect } from 'react'
+
 const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
   // Background-Scroll deaktivieren wenn Modal offen ist
   useEffect(() => {
@@ -289,639 +292,270 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
     </div>
   );
 };
-
-// YouTube CTA Section
-const YouTubeCTA = ({ onOpenVideo }) => (
-  <section
-    style={{
-      backgroundColor: "#f5f5f7",
-      padding: "80px 40px",
-      textAlign: "center",
-    }}
-  >
-    <div style={{ maxWidth: "800px", margin: "0 auto" }}>
-      <div style={{ fontSize: "64px", marginBottom: "24px" }}>📺</div>
-      <h2
-        style={{
-          fontSize: "48px",
-          fontWeight: "600",
-          color: "#1d1d1f",
-          marginBottom: "16px",
-        }}
-      >
-        Folge der Journey auf YouTube
-      </h2>
-      <p
-        style={{
-          fontSize: "20px",
-          color: "#86868b",
-          marginBottom: "40px",
-          lineHeight: "1.4",
-          maxWidth: "600px",
-          margin: "0 auto 40px",
-        }}
-      >
-        Jedes Ziel wird dokumentiert. Jeder Erfolg wird gefeiert. Jeder
-        Rückschlag wird zur Lernchance. Sei live dabei!
-      </p>
-
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "16px",
-        }}
-      >
-        <button
-          onClick={onOpenVideo}
-          style={{
-            backgroundColor: "#ff3b30",
-            color: "white",
-            border: "none",
-            borderRadius: "25px",
-            padding: "16px 32px",
-            fontSize: "18px",
-            fontWeight: "600",
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-          }}
-        >
-          🎬 Erstes Video ansehen
-        </button>
-
-        <a
-          href="https://youtube.com/@bergkabuff"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            color: "#007aff",
-            textDecoration: "none",
-            fontSize: "16px",
-            fontWeight: "500",
-          }}
-        >
-          → Kanal abonnieren
-        </a>
-      </div>
-    </div>
-  </section>
-);
-
-// Deine echten 50 Bucketlist-Ziele
-const goals = [
-  {
-    id: 1,
-    title: "Eine Website erstellen und veröffentlichen",
-    status: "In Arbeit",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 85, // Erhöht, da du kurz vor Launch stehst!
-    category: "Tech-Projekte",
-  },
-  {
-    id: 2,
-    title: "Einen Youtube Kanal starten und ein gut editiertes Video hochladen",
-    status: "In Arbeit",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 60,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 3,
-    title: "Eine eigene App erstellen und veröffentlichen",
-    status: "Geplant",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 0,
-    category: "Tech-Projekte",
-  },
-  {
-    id: 4,
-    title: "Ein Gaming-Zimmer für mich und meine Frau kreieren",
-    status: "In Arbeit",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 25,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 5,
-    title: "Mein eigenes Körpergewicht 3x sauber beim Bankdrücken heben können",
-    status: "In Arbeit",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 70,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 6,
-    title: "Japanisch lernen N3 Niveau",
-    status: "In Arbeit",
-    priority: "Hoch",
-    deadline: "31. Dezember 2026",
-    progress: 20,
-    category: "Lernen & Bildung",
-  },
-  {
-    id: 7,
-    title: "Die Liebe meines Lebens finden",
-    status: "Abgeschlossen",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 100,
-    category: "Große Lebensziele",
-  },
-  {
-    id: 8,
-    title: "Ein eigenes Haus kaufen",
-    status: "Abgeschlossen",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 100,
-    category: "Große Lebensziele",
-  },
-  {
-    id: 9,
-    title: "Einen Hund großziehen",
-    status: "Abgeschlossen",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 100,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 10,
-    title: "Ein Slipknot-Konzert besuchen",
-    status: "Abgeschlossen",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 100,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 11,
-    title: "Einen Baum pflanzen",
-    status: "Abgeschlossen",
-    priority: "Hoch",
-    deadline: "31. Dezember 2025",
-    progress: 100,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 12,
-    title: "Japan besuchen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 13,
-    title: "Jedes Land in Europa besuchen",
-    status: "In Arbeit",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 38,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 14,
-    title: "Den rechten Arm sleeven lassen",
-    status: "In Arbeit",
-    priority: "Mittel",
-    deadline: "31. Dezember 2028",
-    progress: 30,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 15,
-    title: "Das Wiehengebirge durchwandern",
-    status: "In Arbeit",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 25,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 16,
-    title: "Eine Bahn im Schwimmbad ohne Hilfe schwimmen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 25,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 17,
-    title: "Ein eigenes Klemmbausteinset entwerfen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 18,
-    title: "Ein Buch schreiben und veröffentlichen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 19,
-    title: "Einen Lamborghini selber fahren",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 20,
-    title: "Einen sauberen Handstand 10s halten",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 21,
-    title: "Eine Woche Digital Detox durchziehen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 22,
-    title: "Ein vollständiges Lied auf dem Klavier lernen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Lernen & Bildung",
-  },
-  {
-    id: 23,
-    title: "Eine Wintersportart ausprobieren",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 24,
-    title: "Mit dem Fahrrad zur Nordsee fahren",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 25,
-    title: "Ein Bild/Gemälde malen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 26,
-    title: "Ein eigenes Gericht kreieren, benennen und veröffentlichen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 27,
-    title: "In einem Rennwagen auf der Rennstrecke mitfahren",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 28,
-    title: "In einem Rallye-Auto mitfahren",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 29,
-    title: "Auf die Zugspitze",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 30,
-    title: "Einen Kinky Club besuchen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 31,
-    title: "Einen Stand-Up Auftritt machen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 32,
-    title: "Einen eigenen Song schreiben, erstellen und veröffentlichen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 33,
-    title: "Ein eigenes Videospiel erstellen und veröffentlichen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Tech-Projekte",
-  },
-  {
-    id: 34,
-    title: "Singapur besuchen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 35,
-    title: "In einem guten Molekularküche-Restaurant essen gehen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 36,
-    title: "Die Polarlichter sehen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 37,
-    title: "Den Polarkreis überqueren",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 38,
-    title: "Ein Korn-Konzert besuchen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 39,
-    title: "Eine Woche autark in einer Waldhütte wohnen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 40,
-    title: "Eine KZ-Gedenkstätte besuchen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 41,
-    title: "Einen eigenen Whirlpool besitzen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Große Lebensziele",
-  },
-  {
-    id: 42,
-    title: "Ein eigenes Comic erstellen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 43,
-    title: "Eine Umweltaktion organisieren",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2027",
-    progress: 0,
-    category: "Große Lebensziele",
-  },
-  {
-    id: 44,
-    title: "Ein Gedicht schreiben",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Kreative Projekte",
-  },
-  {
-    id: 45,
-    title: "3-Tage Survival ohne Vorräte",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Persönliche Challenges",
-  },
-  {
-    id: 46,
-    title: "Eine Oper besuchen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Besondere Erlebnisse",
-  },
-  {
-    id: 47,
-    title: "Das Kliemannsland besuchen",
-    status: "Geplant",
-    priority: "Mittel",
-    deadline: "31. Dezember 2026",
-    progress: 0,
-    category: "Reisen & Abenteuer",
-  },
-  {
-    id: 48,
-    title: "Fynn Kliemann treffen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Personen treffen",
-  },
-  {
-    id: 49,
-    title: "Maximilian Knabe treffen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Personen treffen",
-  },
-  {
-    id: 50,
-    title: "Dwayne Johnson treffen",
-    status: "Geplant",
-    priority: "Niedrig",
-    deadline: "31. Dezember 2030",
-    progress: 0,
-    category: "Personen treffen",
-  },
-];
-
-// Kategorien automatisch aus den Daten extrahieren
-const categories = ["Alle", ...new Set(goals.map((goal) => goal.category))];
-const priorities = ["Alle Prioritäten", "Hoch", "Mittel", "Niedrig"];
-const statuses = ["Alle Status", "Abgeschlossen", "In Arbeit", "Geplant"];
-
 function App() {
-  // ← ANALYTICS HOOK HINZUFÜGEN
-  const {
-    trackGoalClick,
-    trackCategoryFilter,
-    trackSearch,
-    trackModalOpen,
-    trackExternalLink,
-  } = useAnalytics();
+  // State Management
+  const [goals, setGoals] = useState([]);
+  const [filteredGoals, setFilteredGoals] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [showYouTubeModal, setShowYouTubeModal] = useState(false);
 
+  // Filter States
   const [selectedCategory, setSelectedCategory] = useState("Alle");
   const [selectedPriority, setSelectedPriority] = useState("Alle Prioritäten");
   const [selectedStatus, setSelectedStatus] = useState("Alle Status");
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCard, setExpandedCard] = useState(null);
-  const [showYouTubeModal, setShowYouTubeModal] = useState(false); // NEU: YouTube Modal State
 
-  // ← ERWEITERTE EVENT HANDLER MIT ANALYTICS
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-    trackCategoryFilter(category); // Analytics Event
-  };
+  // Dynamic Filter Options
+  const [categories, setCategories] = useState(["Alle"]);
+  const priorities = ["Alle Prioritäten", "high", "medium", "low"];
+  const statuses = ["Alle Status", "completed", "in_progress", "planned"];
 
-  const handleSearchChange = (term) => {
-    setSearchTerm(term);
-    // Nur längere Suchbegriffe tracken (vermeidet Spam)
-    if (term.length > 2) {
-      trackSearch(term);
+  // Load Goals from Supabase
+  useEffect(() => {
+    loadGoals();
+  }, []);
+
+  const loadGoals = async () => {
+    try {
+      setLoading(true);
+      const data = await goalHelpers.getGoals();
+
+      if (data && Array.isArray(data)) {
+        setGoals(data);
+
+        // Extract unique categories
+        const uniqueCategories = [
+          "Alle",
+          ...new Set(data.map((goal) => goal.category).filter(Boolean)),
+        ];
+        setCategories(uniqueCategories);
+
+        console.log(`✅ Loaded ${data.length} goals from database`);
+      } else {
+        console.warn("No goals data received");
+        setGoals([]);
+      }
+    } catch (err) {
+      console.error("Error loading goals:", err);
+      setError("Fehler beim Laden der Ziele. Bitte versuche es erneut.");
+      setGoals([]);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const handleGoalClick = (goal) => {
-    const wasExpanded = expandedCard === goal.id;
-    setExpandedCard(wasExpanded ? null : goal.id);
-
-    // Nur tracken wenn Ziel aufgeklappt wird (nicht beim Zuklappen)
-    if (!wasExpanded) {
-      trackGoalClick(goal.id, goal.title);
+  // Filter Goals whenever filters change
+  useEffect(() => {
+    if (!goals.length) {
+      setFilteredGoals([]);
+      return;
     }
-  };
 
-  const handleYouTubeModalOpen = () => {
-    setShowYouTubeModal(true);
-    trackModalOpen("youtube_video"); // Analytics Event
-  };
+    const filtered = goals.filter((goal) => {
+      const matchesCategory =
+        selectedCategory === "Alle" || goal.category === selectedCategory;
+      const matchesPriority =
+        selectedPriority === "Alle Prioritäten" ||
+        goal.priority === selectedPriority;
+      const matchesStatus =
+        selectedStatus === "Alle Status" || goal.status === selectedStatus;
+      const matchesSearch =
+        goal.title?.toLowerCase().includes(searchTerm.toLowerCase()) || false;
 
-  const handleExternalLinkClick = (url, linkType) => {
-    trackExternalLink(url, linkType); // Analytics Event
-  };
+      return (
+        matchesCategory && matchesPriority && matchesStatus && matchesSearch
+      );
+    });
 
-  // Beschreibungen für die Ziele hinzufügen
-  const getGoalDescription = (id) => {
-    const descriptions = {
-      1: "Vollständige Entwicklung einer interaktiven Website mit React, modernem Design und Hosting. Das Bergkabuff-Projekt als digitale Heimat.",
-      2: "Professioneller YouTube-Kanal mit regelmäßigen Videos über die Bucketlist-Reise. Erstes Video soll mindestens 1000 Aufrufe erreichen.",
-      3: "Mobile App für iOS und Android mit React Native. Soll die Website ergänzen und unterwegs Bucketlist-Tracking ermöglichen.",
-      4: "Gemütlicher Raum für gemeinsame Gaming-Sessions. Zwei Gaming-Stühle, großer Monitor, RGB-Beleuchtung und alles was dazugehört.",
-      5: "Aktuell bei ca. 2x Körpergewicht. Systematisches Training mit Trainingsplan, Ernährungsoptimierung und Progression tracking.",
-      6: "Von Grundlagen bis N3-Niveau durch strukturierten Sprachkurs, Anime/Manga und Konversationspraxis. Vorbereitung für Japan-Reise.",
-      7: "Mission erfolgreich abgeschlossen! Die perfekte Partnerin gefunden und gemeinsam das Leben aufgebaut.",
-      8: "Eigenheim erworben! Unser 'Bergkabuff' ist jetzt Realität - der perfekte Ort für alle weiteren Projekte.",
-      9: "Unser Hund wurde erfolgreich großgezogen und ist ein vollwertiges Familienmitglied geworden.",
-      10: "Unvergessliches Konzert erlebt! Die Energie und Musik waren genau so episch wie erwartet.",
-      11: "Baum gepflanzt und damit einen kleinen Beitrag für die Umwelt geleistet.",
-      12: "Traumreise nach Japan zur Kirschblütenzeit. Tokyo, Kyoto, Osaka erkunden und die Kultur vollständig erleben.",
-    };
-    return descriptions[id] || "Detaillierte Beschreibung folgt bald...";
-  };
+    setFilteredGoals(filtered);
+  }, [goals, selectedCategory, selectedPriority, selectedStatus, searchTerm]);
 
-  const filteredGoals = goals.filter((goal) => {
-    const matchesCategory =
-      selectedCategory === "Alle" || goal.category === selectedCategory;
-    const matchesPriority =
-      selectedPriority === "Alle Prioritäten" ||
-      goal.priority === selectedPriority;
-    const matchesStatus =
-      selectedStatus === "Alle Status" || goal.status === selectedStatus;
-    const matchesSearch = goal.title
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesPriority && matchesStatus && matchesSearch;
-  });
+  // Beschreibungen für die Ziele
+  const getGoalDescription = (goal) => {
+    if (goal.description) {
+      return goal.description;
+    }
+
+    return "Eine detaillierte Beschreibung folgt bald...";
+  };
 
   // Statistiken berechnen
-  const stats = {
-    total: goals.length,
-    completed: goals.filter((g) => g.status === "Abgeschlossen").length,
-    inProgress: goals.filter((g) => g.status === "In Arbeit").length,
-    planned: goals.filter((g) => g.status === "Geplant").length,
-    averageProgress: Math.round(
-      goals.reduce((sum, g) => sum + g.progress, 0) / goals.length
-    ),
+  const calculateStats = () => {
+    if (!goals.length) {
+      return {
+        total: 0,
+        completed: 0,
+        inProgress: 0,
+        planned: 0,
+        averageProgress: 0,
+      };
+    }
+
+    const completed = goals.filter((g) => g.status === "completed").length;
+    const inProgress = goals.filter((g) => g.status === "in_progress").length;
+    const planned = goals.filter((g) => g.status === "planned").length;
+    const totalProgress = goals.reduce((sum, g) => sum + (g.progress || 0), 0);
+    const averageProgress = Math.round(totalProgress / goals.length);
+
+    return {
+      total: goals.length,
+      completed,
+      inProgress,
+      planned,
+      averageProgress,
+    };
   };
+
+  const stats = calculateStats();
+
+  // Display Mappings
+  const getStatusDisplay = (status) => {
+    const statusMap = {
+      completed: "Abgeschlossen",
+      in_progress: "In Arbeit",
+      planned: "Geplant",
+    };
+    return statusMap[status] || status;
+  };
+
+  const getPriorityDisplay = (priority) => {
+    const priorityMap = {
+      high: "Hoch",
+      medium: "Mittel",
+      low: "Niedrig",
+    };
+    return priorityMap[priority] || priority;
+  };
+
+  const getPriorityColor = (priority) => {
+    const colorMap = {
+      high: "#ff3b30",
+      medium: "#ff9500",
+      low: "#8e8e93",
+    };
+    return colorMap[priority] || "#8e8e93";
+  };
+
+  const getStatusColor = (status) => {
+    const colorMap = {
+      completed: "#34c759",
+      in_progress: "#0071e3",
+      planned: "#86868b",
+    };
+    return colorMap[status] || "#86868b";
+  };
+
+  const getProgressColor = (progress, status) => {
+    if (progress === 100 || status === "completed") return "#34c759";
+    if (progress > 0) return "#0071e3";
+    return "#d2d2d7";
+  };
+
+  const clearAllFilters = () => {
+    setSearchTerm("");
+    setSelectedCategory("Alle");
+    setSelectedPriority("Alle Prioritäten");
+    setSelectedStatus("Alle Status");
+  };
+
+  // Loading State
+  if (loading) {
+    return (
+      <div
+        style={{
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          backgroundColor: "#ffffff",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#1d1d1f",
+        }}
+      >
+        <div style={{ textAlign: "center" }}>
+          <div
+            style={{
+              width: "48px",
+              height: "48px",
+              border: "4px solid #f3f3f3",
+              borderTop: "4px solid #0071e3",
+              borderRadius: "50%",
+              animation: "spin 1s linear infinite",
+              margin: "0 auto 20px",
+            }}
+          />
+          <p style={{ fontSize: "18px", color: "#86868b" }}>
+            Lade deine Ziele...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Error State
+  if (error) {
+    return (
+      <div
+        style={{
+          fontFamily:
+            '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+          backgroundColor: "#ffffff",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#1d1d1f",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+            maxWidth: "500px",
+            padding: "40px",
+            backgroundColor: "#f5f5f7",
+            borderRadius: "18px",
+            margin: "20px",
+          }}
+        >
+          <div style={{ fontSize: "48px", marginBottom: "16px" }}>⚠️</div>
+          <h3
+            style={{
+              fontSize: "24px",
+              fontWeight: "600",
+              color: "#1d1d1f",
+              margin: "0 0 8px 0",
+            }}
+          >
+            Fehler beim Laden
+          </h3>
+          <p
+            style={{ fontSize: "16px", color: "#86868b", margin: "0 0 24px 0" }}
+          >
+            {error}
+          </p>
+          <button
+            onClick={loadGoals}
+            style={{
+              backgroundColor: "#0071e3",
+              color: "#ffffff",
+              border: "none",
+              borderRadius: "20px",
+              padding: "12px 24px",
+              fontSize: "14px",
+              fontWeight: "500",
+              cursor: "pointer",
+              outline: "none",
+            }}
+          >
+            Erneut versuchen
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -937,7 +571,22 @@ function App() {
         width: "100vw",
       }}
     >
-      {/* Header - Mobile-optimiert */}
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+      `}</style>
+
+      {/* Header */}
       <header
         style={{
           borderBottom: "1px solid #d2d2d7",
@@ -952,45 +601,33 @@ function App() {
           style={{
             maxWidth: "1800px",
             margin: "0 auto",
-            padding: "0 20px", // Reduziert von 40px
+            padding: "0 40px",
             width: "100%",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: "56px", // Erhöht von 44px für Mobile
-            minHeight: "56px",
+            height: "44px",
           }}
         >
           <h1
             style={{
-              fontSize: "18px", // Reduziert von 21px für Mobile
+              fontSize: "21px",
               fontWeight: "600",
               margin: 0,
               letterSpacing: "-0.022em",
-              flexShrink: 0, // Verhindert Zusammenquetschen
             }}
           >
-            🏔️ Bergkabuff
+            Bergkabuff
           </h1>
-
-          {/* Mobile-optimierte Navigation */}
-          <nav
-            style={{
-              display: "flex",
-              gap: window.innerWidth > 768 ? "32px" : "16px", // Responsive Gap
-              alignItems: "center",
-              flexShrink: 0, // Verhindert Zusammenquetschen
-            }}
-          >
+          <nav style={{ display: "flex", gap: "32px" }}>
             <a
               href="#goals"
               style={{
                 textDecoration: "none",
                 color: "#1d1d1f",
-                fontSize: window.innerWidth > 768 ? "12px" : "11px", // Responsive Font
+                fontSize: "12px",
                 fontWeight: "400",
                 opacity: 0.8,
-                whiteSpace: "nowrap", // Verhindert Umbruch
               }}
             >
               Goals
@@ -1000,43 +637,33 @@ function App() {
               style={{
                 textDecoration: "none",
                 color: "#1d1d1f",
-                fontSize: window.innerWidth > 768 ? "12px" : "11px", // Responsive Font
+                fontSize: "12px",
                 fontWeight: "400",
                 opacity: 0.8,
-                whiteSpace: "nowrap", // Verhindert Umbruch
-                display: window.innerWidth > 480 ? "block" : "none", // Versteckt auf sehr kleinen Screens
               }}
             >
               About
             </a>
-
-            {/* YouTube Button - Mobile-optimiert mit Analytics */}
-            <button
-              onClick={handleYouTubeModalOpen} // ← ANALYTICS EVENT
-              style={{
-                backgroundColor: "#ff3b30",
-                color: "white",
-                border: "none",
-                borderRadius: "20px",
-                padding: window.innerWidth > 768 ? "8px 16px" : "6px 12px", // Responsive Padding
-                fontSize: window.innerWidth > 768 ? "12px" : "11px", // Responsive Font
-                fontWeight: "500",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                gap: "4px", // Reduziert von 6px
-                whiteSpace: "nowrap", // Verhindert Umbruch
-                flexShrink: 0, // Verhindert Zusammenquetschen
-              }}
-            >
-              📺 {window.innerWidth > 480 ? "YouTube" : "YT"}{" "}
-              {/* Kurze Version auf kleinen Screens */}
-            </button>
           </nav>
         </div>
       </header>
 
       {/* Hero */}
+      <button
+        onClick={() => setShowYouTubeModal(true)}
+        style={{
+          backgroundColor: "#ff3b30",
+          color: "#ffffff",
+          border: "none",
+          borderRadius: "20px",
+          padding: "12px 24px",
+          fontSize: "14px",
+          fontWeight: "500",
+          cursor: "pointer",
+        }}
+      >
+        📺 Meine Story ansehen
+      </button>
       <section
         style={{
           textAlign: "center",
@@ -1071,7 +698,7 @@ function App() {
             marginRight: "auto",
           }}
         >
-          50 Lebensziele. Öffentlich geplant. Systematisch umgesetzt.
+          {stats.total} Lebensziele. Öffentlich geplant. Systematisch umgesetzt.
         </p>
 
         {/* Statistiken */}
@@ -1133,7 +760,7 @@ function App() {
           width: "100%",
         }}
       >
-        {/* Search - ← ANALYTICS EVENT HANDLER ANGEPASST */}
+        {/* Search */}
         <div
           style={{
             maxWidth: "480px",
@@ -1145,7 +772,7 @@ function App() {
             type="text"
             placeholder="Durchsuche deine Ziele..."
             value={searchTerm}
-            onChange={(e) => handleSearchChange(e.target.value)} // ← ANALYTICS
+            onChange={(e) => setSearchTerm(e.target.value)}
             style={{
               width: "100%",
               height: "44px",
@@ -1161,7 +788,7 @@ function App() {
           />
         </div>
 
-        {/* Filter Kategorie - ← ANALYTICS EVENT HANDLER ANGEPASST */}
+        {/* Filter Kategorie */}
         <div
           style={{
             display: "flex",
@@ -1174,7 +801,7 @@ function App() {
           {categories.map((cat) => (
             <button
               key={cat}
-              onClick={() => handleCategoryChange(cat)} // ← ANALYTICS
+              onClick={() => setSelectedCategory(cat)}
               style={{
                 padding: "8px 16px",
                 border:
@@ -1207,54 +834,62 @@ function App() {
           }}
         >
           <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-            {priorities.map((prio) => (
-              <button
-                key={prio}
-                onClick={() => setSelectedPriority(prio)}
-                style={{
-                  padding: "6px 12px",
-                  border:
-                    selectedPriority === prio
-                      ? "1px solid #86868b"
-                      : "1px solid #d2d2d7",
-                  borderRadius: "16px",
-                  backgroundColor:
-                    selectedPriority === prio ? "#86868b" : "#ffffff",
-                  color: selectedPriority === prio ? "#ffffff" : "#1d1d1f",
-                  fontSize: "12px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                  outline: "none",
-                }}
-              >
-                {prio}
-              </button>
-            ))}
+            {priorities.map((prio) => {
+              const displayPrio =
+                prio === "Alle Prioritäten" ? prio : getPriorityDisplay(prio);
+              return (
+                <button
+                  key={prio}
+                  onClick={() => setSelectedPriority(prio)}
+                  style={{
+                    padding: "6px 12px",
+                    border:
+                      selectedPriority === prio
+                        ? "1px solid #86868b"
+                        : "1px solid #d2d2d7",
+                    borderRadius: "16px",
+                    backgroundColor:
+                      selectedPriority === prio ? "#86868b" : "#ffffff",
+                    color: selectedPriority === prio ? "#ffffff" : "#1d1d1f",
+                    fontSize: "12px",
+                    fontWeight: "400",
+                    cursor: "pointer",
+                    outline: "none",
+                  }}
+                >
+                  {displayPrio}
+                </button>
+              );
+            })}
           </div>
           <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
-            {statuses.map((status) => (
-              <button
-                key={status}
-                onClick={() => setSelectedStatus(status)}
-                style={{
-                  padding: "6px 12px",
-                  border:
-                    selectedStatus === status
-                      ? "1px solid #86868b"
-                      : "1px solid #d2d2d7",
-                  borderRadius: "16px",
-                  backgroundColor:
-                    selectedStatus === status ? "#86868b" : "#ffffff",
-                  color: selectedStatus === status ? "#ffffff" : "#1d1d1f",
-                  fontSize: "12px",
-                  fontWeight: "400",
-                  cursor: "pointer",
-                  outline: "none",
-                }}
-              >
-                {status}
-              </button>
-            ))}
+            {statuses.map((status) => {
+              const displayStatus =
+                status === "Alle Status" ? status : getStatusDisplay(status);
+              return (
+                <button
+                  key={status}
+                  onClick={() => setSelectedStatus(status)}
+                  style={{
+                    padding: "6px 12px",
+                    border:
+                      selectedStatus === status
+                        ? "1px solid #86868b"
+                        : "1px solid #d2d2d7",
+                    borderRadius: "16px",
+                    backgroundColor:
+                      selectedStatus === status ? "#86868b" : "#ffffff",
+                    color: selectedStatus === status ? "#ffffff" : "#1d1d1f",
+                    fontSize: "12px",
+                    fontWeight: "400",
+                    cursor: "pointer",
+                    outline: "none",
+                  }}
+                >
+                  {displayStatus}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -1271,7 +906,7 @@ function App() {
           </p>
         </div>
 
-        {/* Goals Grid - ← ANALYTICS EVENT HANDLER ANGEPASST */}
+        {/* Goals Grid */}
         <div
           style={{
             display: "grid",
@@ -1283,6 +918,10 @@ function App() {
         >
           {filteredGoals.map((goal) => {
             const isExpanded = expandedCard === goal.id;
+            const statusColor = getStatusColor(goal.status);
+            const priorityColor = getPriorityColor(goal.priority);
+            const progressColor = getProgressColor(goal.progress, goal.status);
+
             return (
               <div
                 key={goal.id}
@@ -1300,7 +939,7 @@ function App() {
                   cursor: "pointer",
                   overflow: "hidden",
                 }}
-                onClick={() => handleGoalClick(goal)} // ← ANALYTICS
+                onClick={() => setExpandedCard(isExpanded ? null : goal.id)}
               >
                 <div
                   style={{
@@ -1348,18 +987,13 @@ function App() {
                       style={{
                         fontSize: "10px",
                         padding: "2px 6px",
-                        backgroundColor:
-                          goal.priority === "Hoch"
-                            ? "#ff3b30"
-                            : goal.priority === "Mittel"
-                            ? "#ff9500"
-                            : "#8e8e93",
+                        backgroundColor: priorityColor,
                         color: "#ffffff",
                         borderRadius: "6px",
                         fontWeight: "500",
                       }}
                     >
-                      {goal.priority}
+                      {getPriorityDisplay(goal.priority)}
                     </span>
                   </div>
                 </div>
@@ -1375,15 +1009,10 @@ function App() {
                     <span
                       style={{
                         fontSize: "14px",
-                        color:
-                          goal.status === "Abgeschlossen"
-                            ? "#34c759"
-                            : goal.status === "In Arbeit"
-                            ? "#0071e3"
-                            : "#86868b",
+                        color: statusColor,
                       }}
                     >
-                      {goal.status}
+                      {getStatusDisplay(goal.status)}
                     </span>
                     <span
                       style={{
@@ -1392,7 +1021,7 @@ function App() {
                         fontWeight: "600",
                       }}
                     >
-                      {goal.progress}%
+                      {goal.progress || 0}%
                     </span>
                   </div>
                   <div
@@ -1406,14 +1035,9 @@ function App() {
                   >
                     <div
                       style={{
-                        width: `${goal.progress}%`,
+                        width: `${goal.progress || 0}%`,
                         height: "100%",
-                        backgroundColor:
-                          goal.progress === 100
-                            ? "#34c759"
-                            : goal.progress > 0
-                            ? "#0071e3"
-                            : "#d2d2d7",
+                        backgroundColor: progressColor,
                         transition: "width 0.3s ease",
                       }}
                     />
@@ -1434,7 +1058,7 @@ function App() {
                       gap: "8px",
                     }}
                   >
-                    <span>{goal.deadline}</span>
+                    <span>{goal.deadline || "Kein Deadline"}</span>
                     <span
                       style={{
                         color: "#0071e3",
@@ -1472,7 +1096,7 @@ function App() {
                           margin: 0,
                         }}
                       >
-                        {getGoalDescription(goal.id)}
+                        {getGoalDescription(goal)}
                       </p>
                     </div>
 
@@ -1499,16 +1123,11 @@ function App() {
                         <div
                           style={{
                             fontSize: "13px",
-                            color:
-                              goal.status === "Abgeschlossen"
-                                ? "#34c759"
-                                : goal.status === "In Arbeit"
-                                ? "#0071e3"
-                                : "#86868b",
+                            color: statusColor,
                             fontWeight: "500",
                           }}
                         >
-                          {goal.status}
+                          {getStatusDisplay(goal.status)}
                         </div>
                       </div>
                       <div>
@@ -1530,7 +1149,7 @@ function App() {
                             fontWeight: "500",
                           }}
                         >
-                          {goal.deadline}
+                          {goal.deadline || "Flexibel"}
                         </div>
                       </div>
                     </div>
@@ -1559,7 +1178,8 @@ function App() {
           })}
         </div>
 
-        {filteredGoals.length === 0 && (
+        {/* No Results State */}
+        {filteredGoals.length === 0 && goals.length > 0 && (
           <div
             style={{
               textAlign: "center",
@@ -1591,12 +1211,7 @@ function App() {
               Versuche einen anderen Suchbegriff oder ändere die Filter.
             </p>
             <button
-              onClick={() => {
-                setSearchTerm("");
-                setSelectedCategory("Alle");
-                setSelectedPriority("Alle Prioritäten");
-                setSelectedStatus("Alle Status");
-              }}
+              onClick={clearAllFilters}
               style={{
                 backgroundColor: "#86868b",
                 color: "#ffffff",
@@ -1613,10 +1228,113 @@ function App() {
             </button>
           </div>
         )}
-      </section>
 
-      {/* NEU: YouTube CTA Section - zwischen Goals und Footer eingefügt */}
-      <YouTubeCTA onOpenVideo={handleYouTubeModalOpen} />
+        {/* Empty State - No Goals at all */}
+        {goals.length === 0 && !loading && (
+          <div
+            style={{
+              textAlign: "center",
+              padding: "60px 20px",
+              backgroundColor: "#f5f5f7",
+              borderRadius: "18px",
+              margin: "40px auto",
+              maxWidth: "500px",
+            }}
+          >
+            <div style={{ fontSize: "48px", marginBottom: "16px" }}>🎯</div>
+            <h3
+              style={{
+                fontSize: "24px",
+                fontWeight: "600",
+                color: "#1d1d1f",
+                margin: "0 0 8px 0",
+              }}
+            >
+              Noch keine Ziele vorhanden
+            </h3>
+            <p
+              style={{
+                fontSize: "16px",
+                color: "#86868b",
+                margin: "0 0 24px 0",
+              }}
+            >
+              Füge dein erstes Ziel hinzu und starte deine Reise!
+            </p>
+            <button
+              onClick={loadGoals}
+              style={{
+                backgroundColor: "#0071e3",
+                color: "#ffffff",
+                border: "none",
+                borderRadius: "20px",
+                padding: "12px 24px",
+                fontSize: "14px",
+                fontWeight: "500",
+                cursor: "pointer",
+                outline: "none",
+              }}
+            >
+              Daten neu laden
+            </button>
+          </div>
+        )}
+
+        {/* Live Data Indicator */}
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "40px",
+            padding: "20px",
+            backgroundColor: "#f5f5f7",
+            borderRadius: "12px",
+            maxWidth: "600px",
+            margin: "40px auto 0",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "8px",
+              marginBottom: "8px",
+            }}
+          >
+            <div
+              style={{
+                width: "8px",
+                height: "8px",
+                backgroundColor: "#34c759",
+                borderRadius: "50%",
+                animation: "pulse 2s infinite",
+              }}
+            />
+            <span
+              style={{
+                fontSize: "12px",
+                fontWeight: "600",
+                color: "#34c759",
+                textTransform: "uppercase",
+                letterSpacing: "0.5px",
+              }}
+            >
+              Live Database
+            </span>
+          </div>
+          <p
+            style={{
+              fontSize: "13px",
+              color: "#86868b",
+              margin: 0,
+              lineHeight: 1.4,
+            }}
+          >
+            Daten werden live aus der Supabase-Datenbank geladen. Alle
+            Änderungen werden automatisch synchronisiert.
+          </p>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer
@@ -1633,15 +1351,13 @@ function App() {
             margin: 0,
           }}
         >
-          Made with passion and determination
+          Made with passion and determination • Built with React + Supabase
         </p>
       </footer>
-
-      {/* NEU: YouTube Modal - am Ende eingefügt */}
+      {/* YouTube Modal */}
       <YouTubeModal
         isOpen={showYouTubeModal}
         onClose={() => setShowYouTubeModal(false)}
-        videoId="dQw4w9WgXcQ" // Später durch deine echte Video-ID ersetzen
       />
     </div>
   );
