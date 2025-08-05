@@ -1,7 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { goalHelpers } from "../lib/goalHelpers";
-import { notionSync } from "../lib/notionSync";
 
 // CSS Reset für Browser-Standards
 const globalStyles = `
@@ -22,9 +21,13 @@ if (typeof document !== "undefined") {
   styleSheet.innerText = globalStyles;
   document.head.appendChild(styleSheet);
 }
+// Ersetze die YouTubeModal Komponente in deiner App.jsx
 
-// YouTube Modal Component
+// WICHTIG: Füge useEffect zum Import hinzu:
+// import { useState, useEffect } from 'react'
+
 const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
+  // Background-Scroll deaktivieren wenn Modal offen ist
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -32,6 +35,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
       document.body.style.overflow = "unset";
     }
 
+    // Cleanup beim Unmount
     return () => {
       document.body.style.overflow = "unset";
     };
@@ -69,6 +73,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
           margin: "auto",
         }}
       >
+        {/* Modal Header - Mobile-optimiert */}
         <div
           style={{
             display: "flex",
@@ -113,6 +118,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
           </button>
         </div>
 
+        {/* Scrollable Content */}
         <div
           style={{
             padding: window.innerWidth > 768 ? "24px" : "16px",
@@ -121,6 +127,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
           }}
         >
           {videoId === "dQw4w9WgXcQ" ? (
+            // Placeholder für dein kommendes Video
             <div
               style={{
                 aspectRatio: "16/9",
@@ -166,6 +173,34 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
                 Hier wird es eingebettet, sobald es auf YouTube live ist.
               </p>
 
+              {/* Einbettungscode - versteckt auf sehr kleinen Screens */}
+              {window.innerWidth > 480 && (
+                <div
+                  style={{
+                    backgroundColor: "#f5f5f7",
+                    border: "2px dashed #d2d2d7",
+                    borderRadius: "8px",
+                    padding: "16px",
+                    textAlign: "left",
+                    fontFamily: "monospace",
+                    fontSize: "11px",
+                    color: "#86868b",
+                    marginBottom: "24px",
+                    overflow: "auto",
+                  }}
+                >
+                  {`<iframe 
+  width="100%" 
+  height="100%"
+  src="https://www.youtube.com/embed/DEINE_VIDEO_ID"
+  title="Bergkabuff - Das Projekt startet"
+  frameborder="0"
+  allowfullscreen
+></iframe>`}
+                </div>
+              )}
+
+              {/* YouTube-Button - Mobile-optimiert */}
               <a
                 href="https://youtube.com/@bergkabuff"
                 target="_blank"
@@ -189,6 +224,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
               </a>
             </div>
           ) : (
+            // Echtes YouTube Video (wenn du eine Video-ID hast)
             <div
               style={{
                 aspectRatio: "16/9",
@@ -208,6 +244,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
             </div>
           )}
 
+          {/* Video Details */}
           <div>
             <h4
               style={{
@@ -230,7 +267,7 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
             >
               <li>Warum das Bergkabuff-Projekt entstanden ist</li>
               <li>Live-Demo dieser Website</li>
-              <li>Einblick in meine {goals?.length || 50} Lebensziele</li>
+              <li>Einblick in meine 50 Lebensziele</li>
               <li>Ausblick auf kommende Projekte</li>
               <li>Wie du Teil der Community werden kannst</li>
             </ul>
@@ -255,121 +292,6 @@ const YouTubeModal = ({ isOpen, onClose, videoId = "dQw4w9WgXcQ" }) => {
     </div>
   );
 };
-
-// Enhanced Sync Button Component
-const SyncButton = ({ onSync, syncing, lastSync }) => {
-  return (
-    <div
-      style={{
-        position: "fixed",
-        bottom: "20px",
-        right: "20px",
-        zIndex: 50,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "flex-end",
-        gap: "8px",
-      }}
-    >
-      {lastSync && (
-        <div
-          style={{
-            fontSize: "11px",
-            color: "#86868b",
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-            padding: "4px 8px",
-            borderRadius: "8px",
-            backdropFilter: "blur(10px)",
-            border: "1px solid #d2d2d7",
-          }}
-        >
-          Letzter Sync: {lastSync.toLocaleTimeString()}
-        </div>
-      )}
-
-      <button
-        onClick={onSync}
-        disabled={syncing}
-        style={{
-          backgroundColor: syncing ? "#86868b" : "#0071e3",
-          color: "#ffffff",
-          border: "none",
-          borderRadius: "25px",
-          padding: "12px 20px",
-          fontSize: "14px",
-          fontWeight: "500",
-          cursor: syncing ? "not-allowed" : "pointer",
-          outline: "none",
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
-          boxShadow: "0 4px 14px rgba(0, 113, 227, 0.15)",
-          transition: "all 0.2s ease",
-        }}
-      >
-        <span
-          style={{
-            animation: syncing ? "spin 1s linear infinite" : "none",
-            display: "inline-block",
-          }}
-        >
-          🔄
-        </span>
-        {syncing ? "Syncronisiere..." : "Sync mit Notion"}
-      </button>
-    </div>
-  );
-};
-
-// Enhanced Tag Component
-const TagList = ({ tags, maxVisible = 3 }) => {
-  if (!tags || !Array.isArray(tags) || tags.length === 0) return null;
-
-  const visibleTags = tags.slice(0, maxVisible);
-  const hiddenCount = tags.length - maxVisible;
-
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        gap: "4px",
-        marginTop: "8px",
-      }}
-    >
-      {visibleTags.map((tag, index) => (
-        <span
-          key={index}
-          style={{
-            fontSize: "10px",
-            padding: "2px 6px",
-            backgroundColor: "#007aff",
-            color: "#ffffff",
-            borderRadius: "4px",
-            fontWeight: "500",
-          }}
-        >
-          {tag}
-        </span>
-      ))}
-      {hiddenCount > 0 && (
-        <span
-          style={{
-            fontSize: "10px",
-            padding: "2px 6px",
-            backgroundColor: "#f5f5f7",
-            color: "#86868b",
-            borderRadius: "4px",
-            fontWeight: "500",
-          }}
-        >
-          +{hiddenCount}
-        </span>
-      )}
-    </div>
-  );
-};
-
 function App() {
   // State Management
   const [goals, setGoals] = useState([]);
@@ -377,10 +299,6 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showYouTubeModal, setShowYouTubeModal] = useState(false);
-
-  // Sync State
-  const [syncing, setSyncing] = useState(false);
-  const [lastSync, setLastSync] = useState(null);
 
   // Filter States
   const [selectedCategory, setSelectedCategory] = useState("Alle");
@@ -394,7 +312,7 @@ function App() {
   const priorities = ["Alle Prioritäten", "high", "medium", "low"];
   const statuses = ["Alle Status", "completed", "in_progress", "planned"];
 
-  // Load Goals from Supabase - Enhanced with all fields
+  // Load Goals from Supabase
   useEffect(() => {
     loadGoals();
   }, []);
@@ -402,35 +320,19 @@ function App() {
   const loadGoals = async () => {
     try {
       setLoading(true);
-
-      // Enhanced query to load all available fields
-      const data = await goalHelpers.getGoalsEnhanced();
+      const data = await goalHelpers.getGoals();
 
       if (data && Array.isArray(data)) {
-        // Sort by priority and then by created_at
-        const sortedGoals = data.sort((a, b) => {
-          const priorityOrder = { high: 3, medium: 2, low: 1 };
-          const priorityDiff =
-            (priorityOrder[b.priority] || 0) - (priorityOrder[a.priority] || 0);
-
-          if (priorityDiff !== 0) return priorityDiff;
-
-          return new Date(b.created_at) - new Date(a.created_at);
-        });
-
-        setGoals(sortedGoals);
+        setGoals(data);
 
         // Extract unique categories
         const uniqueCategories = [
           "Alle",
-          ...new Set(sortedGoals.map((goal) => goal.category).filter(Boolean)),
+          ...new Set(data.map((goal) => goal.category).filter(Boolean)),
         ];
         setCategories(uniqueCategories);
 
-        console.log(
-          `✅ Loaded ${sortedGoals.length} goals from database with enhanced schema`
-        );
-        console.log("Sample goal structure:", sortedGoals[0]);
+        console.log(`✅ Loaded ${data.length} goals from database`);
       } else {
         console.warn("No goals data received");
         setGoals([]);
@@ -444,46 +346,7 @@ function App() {
     }
   };
 
-  // Enhanced Sync with Notion
-  const handleNotionSync = async () => {
-    try {
-      setSyncing(true);
-      console.log("🔄 Starting Notion sync...");
-
-      // Use client-side sync
-      const result = await notionSync.syncFromNotion();
-
-      if (result.success) {
-        // Reload goals after sync to get fresh data
-        await loadGoals();
-        setLastSync(new Date());
-
-        // Show success message in console
-        console.log(`✅ Sync successful!`);
-        console.log(`📊 Stats:`, {
-          synced: result.synced,
-          created: result.created,
-          updated: result.updated,
-          notion_linked: result.notion_linked,
-          simulation: result.simulation,
-        });
-
-        // TODO: Add toast notification here later
-        // toast.success(`✅ Sync completed: ${result.synced} goals processed`)
-      } else {
-        throw new Error(result.error || "Sync failed");
-      }
-    } catch (error) {
-      console.error("❌ Sync error:", error.message);
-
-      // TODO: Add toast error notification here later
-      // toast.error(`❌ Sync failed: ${error.message}`)
-    } finally {
-      setSyncing(false);
-    }
-  };
-
-  // Filter Goals whenever filters change - Enhanced
+  // Filter Goals whenever filters change
   useEffect(() => {
     if (!goals.length) {
       setFilteredGoals([]);
@@ -491,9 +354,6 @@ function App() {
     }
 
     const filtered = goals.filter((goal) => {
-      // Only show public goals
-      if (goal.is_public === false) return false;
-
       const matchesCategory =
         selectedCategory === "Alle" || goal.category === selectedCategory;
       const matchesPriority =
@@ -501,14 +361,8 @@ function App() {
         goal.priority === selectedPriority;
       const matchesStatus =
         selectedStatus === "Alle Status" || goal.status === selectedStatus;
-
-      // Enhanced search: search in title, description, and tags
-      const searchLower = searchTerm.toLowerCase();
       const matchesSearch =
-        goal.title?.toLowerCase().includes(searchLower) ||
-        goal.description?.toLowerCase().includes(searchLower) ||
-        (goal.tags &&
-          goal.tags.some((tag) => tag.toLowerCase().includes(searchLower)));
+        goal.title?.toLowerCase().includes(searchTerm.toLowerCase()) || false;
 
       return (
         matchesCategory && matchesPriority && matchesStatus && matchesSearch
@@ -518,16 +372,16 @@ function App() {
     setFilteredGoals(filtered);
   }, [goals, selectedCategory, selectedPriority, selectedStatus, searchTerm]);
 
-  // Enhanced Goal Description
+  // Beschreibungen für die Ziele
   const getGoalDescription = (goal) => {
-    if (goal.description && goal.description.trim()) {
+    if (goal.description) {
       return goal.description;
     }
 
     return "Eine detaillierte Beschreibung folgt bald...";
   };
 
-  // Enhanced Statistics calculation
+  // Statistiken berechnen
   const calculateStats = () => {
     if (!goals.length) {
       return {
@@ -536,47 +390,32 @@ function App() {
         inProgress: 0,
         planned: 0,
         averageProgress: 0,
-        publicGoals: 0,
       };
     }
 
-    const publicGoals = goals.filter((g) => g.is_public !== false);
-    const completed = publicGoals.filter(
-      (g) => g.status === "completed"
-    ).length;
-    const inProgress = publicGoals.filter(
-      (g) => g.status === "in_progress"
-    ).length;
-    const planned = publicGoals.filter((g) => g.status === "planned").length;
-    const totalProgress = publicGoals.reduce(
-      (sum, g) => sum + (g.progress || 0),
-      0
-    );
-    const averageProgress =
-      publicGoals.length > 0
-        ? Math.round(totalProgress / publicGoals.length)
-        : 0;
+    const completed = goals.filter((g) => g.status === "completed").length;
+    const inProgress = goals.filter((g) => g.status === "in_progress").length;
+    const planned = goals.filter((g) => g.status === "planned").length;
+    const totalProgress = goals.reduce((sum, g) => sum + (g.progress || 0), 0);
+    const averageProgress = Math.round(totalProgress / goals.length);
 
     return {
-      total: publicGoals.length,
+      total: goals.length,
       completed,
       inProgress,
       planned,
       averageProgress,
-      publicGoals: publicGoals.length,
     };
   };
 
   const stats = calculateStats();
 
-  // Display Mappings (same as before)
+  // Display Mappings
   const getStatusDisplay = (status) => {
     const statusMap = {
       completed: "Abgeschlossen",
       in_progress: "In Arbeit",
       planned: "Geplant",
-      paused: "Pausiert",
-      cancelled: "Abgebrochen",
     };
     return statusMap[status] || status;
   };
@@ -604,8 +443,6 @@ function App() {
       completed: "#34c759",
       in_progress: "#0071e3",
       planned: "#86868b",
-      paused: "#ff9500",
-      cancelled: "#8e8e93",
     };
     return colorMap[status] || "#86868b";
   };
@@ -623,7 +460,7 @@ function App() {
     setSelectedStatus("Alle Status");
   };
 
-  // Loading State (same as before)
+  // Loading State
   if (loading) {
     return (
       <div
@@ -658,7 +495,7 @@ function App() {
     );
   }
 
-  // Error State (same as before)
+  // Error State
   if (error) {
     return (
       <div
@@ -749,7 +586,7 @@ function App() {
         }
       `}</style>
 
-      {/* Header (same as before) */}
+      {/* Header */}
       <header
         style={{
           borderBottom: "1px solid #d2d2d7",
@@ -811,7 +648,22 @@ function App() {
         </div>
       </header>
 
-      {/* Hero - Enhanced with sync info */}
+      {/* Hero */}
+      <button
+        onClick={() => setShowYouTubeModal(true)}
+        style={{
+          backgroundColor: "#ff3b30",
+          color: "#ffffff",
+          border: "none",
+          borderRadius: "20px",
+          padding: "12px 24px",
+          fontSize: "14px",
+          fontWeight: "500",
+          cursor: "pointer",
+        }}
+      >
+        📺 Meine Story ansehen
+      </button>
       <section
         style={{
           textAlign: "center",
@@ -821,23 +673,6 @@ function App() {
           width: "100%",
         }}
       >
-        <button
-          onClick={() => setShowYouTubeModal(true)}
-          style={{
-            backgroundColor: "#ff3b30",
-            color: "#ffffff",
-            border: "none",
-            borderRadius: "20px",
-            padding: "12px 24px",
-            fontSize: "14px",
-            fontWeight: "500",
-            cursor: "pointer",
-            marginBottom: "40px",
-          }}
-        >
-          📺 Meine Story ansehen
-        </button>
-
         <h1
           style={{
             fontSize: "56px",
@@ -866,7 +701,7 @@ function App() {
           {stats.total} Lebensziele. Öffentlich geplant. Systematisch umgesetzt.
         </p>
 
-        {/* Enhanced Statistics */}
+        {/* Statistiken */}
         <div
           style={{
             display: "grid",
@@ -915,7 +750,7 @@ function App() {
         </div>
       </section>
 
-      {/* Goals Section - All filtering and display logic remains the same */}
+      {/* Goals Section */}
       <section
         id="goals"
         style={{
@@ -925,7 +760,7 @@ function App() {
           width: "100%",
         }}
       >
-        {/* Search Bar - Enhanced with placeholder */}
+        {/* Search */}
         <div
           style={{
             maxWidth: "480px",
@@ -935,7 +770,7 @@ function App() {
         >
           <input
             type="text"
-            placeholder="Durchsuche Ziele, Beschreibungen & Tags..."
+            placeholder="Durchsuche deine Ziele..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{
@@ -1071,7 +906,7 @@ function App() {
           </p>
         </div>
 
-        {/* Enhanced Goals Grid */}
+        {/* Goals Grid */}
         <div
           style={{
             display: "grid",
@@ -1096,33 +931,16 @@ function App() {
                   padding: "24px",
                   backgroundColor: "#ffffff",
                   transition: "all 0.3s ease",
-                  height: isExpanded ? "auto" : "240px",
-                  minHeight: "240px",
+                  height: isExpanded ? "auto" : "200px",
+                  minHeight: "200px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "space-between",
                   cursor: "pointer",
                   overflow: "hidden",
-                  position: "relative",
                 }}
                 onClick={() => setExpandedCard(isExpanded ? null : goal.id)}
               >
-                {/* Notion Sync Indicator */}
-                {goal.notion_page_id && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "12px",
-                      right: "12px",
-                      width: "8px",
-                      height: "8px",
-                      backgroundColor: "#34c759",
-                      borderRadius: "50%",
-                      title: "Synced with Notion",
-                    }}
-                  />
-                )}
-
                 <div
                   style={{
                     display: "flex",
@@ -1179,29 +997,6 @@ function App() {
                     </span>
                   </div>
                 </div>
-
-                {/* Enhanced Description Preview */}
-                {!isExpanded && goal.description && (
-                  <div style={{ marginBottom: "12px" }}>
-                    <p
-                      style={{
-                        fontSize: "13px",
-                        lineHeight: "1.4",
-                        color: "#86868b",
-                        margin: 0,
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                        overflow: "hidden",
-                      }}
-                    >
-                      {goal.description}
-                    </p>
-                  </div>
-                )}
-
-                {/* Tags Preview */}
-                {!isExpanded && <TagList tags={goal.tags} maxVisible={3} />}
 
                 <div style={{ marginBottom: "12px" }}>
                   <div
@@ -1305,7 +1100,6 @@ function App() {
                       </p>
                     </div>
 
-                    {/* Enhanced Details in Expanded View */}
                     <div
                       style={{
                         display: "grid",
@@ -1359,76 +1153,6 @@ function App() {
                         </div>
                       </div>
                     </div>
-
-                    {/* All Tags in Expanded View */}
-                    {goal.tags && goal.tags.length > 0 && (
-                      <div style={{ marginBottom: "16px" }}>
-                        <span
-                          style={{
-                            fontSize: "11px",
-                            fontWeight: "600",
-                            color: "#86868b",
-                            textTransform: "uppercase",
-                            letterSpacing: "0.5px",
-                            display: "block",
-                            marginBottom: "8px",
-                          }}
-                        >
-                          Tags
-                        </span>
-                        <TagList tags={goal.tags} maxVisible={10} />
-                      </div>
-                    )}
-
-                    {/* Resources Links */}
-                    {goal.resources &&
-                      goal.resources.links &&
-                      goal.resources.links.length > 0 && (
-                        <div style={{ marginBottom: "16px" }}>
-                          <span
-                            style={{
-                              fontSize: "11px",
-                              fontWeight: "600",
-                              color: "#86868b",
-                              textTransform: "uppercase",
-                              letterSpacing: "0.5px",
-                              display: "block",
-                              marginBottom: "8px",
-                            }}
-                          >
-                            Ressourcen
-                          </span>
-                          <div
-                            style={{
-                              display: "flex",
-                              flexWrap: "wrap",
-                              gap: "4px",
-                            }}
-                          >
-                            {goal.resources.links
-                              .slice(0, 3)
-                              .map((link, index) => (
-                                <a
-                                  key={index}
-                                  href={link.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  style={{
-                                    fontSize: "11px",
-                                    padding: "4px 8px",
-                                    backgroundColor: "#007aff",
-                                    color: "#ffffff",
-                                    borderRadius: "6px",
-                                    textDecoration: "none",
-                                    fontWeight: "500",
-                                  }}
-                                >
-                                  🔗 {link.title || "Link"}
-                                </a>
-                              ))}
-                          </div>
-                        </div>
-                      )}
 
                     <div
                       style={{
@@ -1556,7 +1280,7 @@ function App() {
           </div>
         )}
 
-        {/* Enhanced Live Data Indicator */}
+        {/* Live Data Indicator */}
         <div
           style={{
             textAlign: "center",
@@ -1597,19 +1321,6 @@ function App() {
             >
               Live Database
             </span>
-            {lastSync && (
-              <>
-                <span style={{ color: "#86868b", fontSize: "12px" }}>•</span>
-                <span
-                  style={{
-                    fontSize: "11px",
-                    color: "#86868b",
-                  }}
-                >
-                  Letzter Sync: {lastSync.toLocaleTimeString()}
-                </span>
-              </>
-            )}
           </div>
           <p
             style={{
@@ -1619,14 +1330,8 @@ function App() {
               lineHeight: 1.4,
             }}
           >
-            Daten werden live aus der Supabase-Datenbank geladen.
-            {goals.filter((g) => g.notion_page_id).length > 0 && (
-              <>
-                {" "}
-                {goals.filter((g) => g.notion_page_id).length} Ziele sind mit
-                Notion synchronisiert.
-              </>
-            )}
+            Daten werden live aus der Supabase-Datenbank geladen. Alle
+            Änderungen werden automatisch synchronisiert.
           </p>
         </div>
       </section>
@@ -1646,18 +1351,9 @@ function App() {
             margin: 0,
           }}
         >
-          Made with passion and determination • Built with React + Supabase +
-          Notion
+          Made with passion and determination • Built with React + Supabase
         </p>
       </footer>
-
-      {/* Enhanced Sync Button */}
-      <SyncButton
-        onSync={handleNotionSync}
-        syncing={syncing}
-        lastSync={lastSync}
-      />
-
       {/* YouTube Modal */}
       <YouTubeModal
         isOpen={showYouTubeModal}

@@ -1,0 +1,1916 @@
+{
+  "exported_at": "2025-08-03T19:41:56.123Z",
+  "source": "Supabase Database",
+  "supabase_url": "https://ucgusicvcgqvrvqxgckh.supabase.co",
+  "total_goals": 53,
+  "categories": [
+    "Personen treffen",
+    "Reisen & Abenteuer",
+    "Tech-Projekte",
+    "Kreative Projekte",
+    "Persönliche Challenges",
+    "Lernen & Bildung",
+    "Große Lebensziele",
+    "Besondere Erlebnisse"
+  ],
+  "goals": [
+    {
+      "id": "01290843-3ac6-41eb-b947-406357dde67c",
+      "title": "Dwayne Johnson treffen",
+      "description": "Dwayne Johnson treffen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Personen treffen",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 50,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "7104766b-9971-4832-af26-6738fbe40341",
+      "title": "Das Kliemannsland besuchen",
+      "description": "Das Kliemannsland besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 47,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "ccedb15e-1d13-4acf-9552-05dc0d15d2d2",
+      "title": "Fynn Kliemann treffen",
+      "description": "Fynn Kliemann treffen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Personen treffen",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 48,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "b1732326-b044-449a-ae8e-fa3de86304a0",
+      "title": "Maximilian Knabe treffen",
+      "description": "Maximilian Knabe treffen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Personen treffen",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 49,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "a404b478-b7fd-4c15-8594-67ddb6eac5b7",
+      "title": "Eine Website erstellen und veröffentlichen",
+      "description": "Vollständige Entwicklung einer interaktiven Website mit React, modernem Design und Hosting. Das Bergkabuff-Projekt als digitale Heimat.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Tech-Projekte",
+      "progress": 85,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "tech",
+        "priority",
+        "website"
+      ],
+      "resources": {
+        "legacy_id": 1,
+        "migrated_at": "2025-08-03T13:13:24.809Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "75edd047-a19d-40d6-9047-dd319be91f69",
+      "title": "Einen Youtube Kanal starten und ein gut editiertes Video hochladen",
+      "description": "Professioneller YouTube-Kanal mit regelmäßigen Videos über die Bucketlist-Reise. Erstes Video soll mindestens 1000 Aufrufe erreichen.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Kreative Projekte",
+      "progress": 60,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "creative",
+        "priority",
+        "youtube"
+      ],
+      "resources": {
+        "legacy_id": 2,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "ac1410e2-1956-48bf-b8e4-7b7699f66ac3",
+      "title": "Eine eigene App erstellen und veröffentlichen",
+      "description": "Mobile App für iOS und Android mit React Native. Soll die Website ergänzen und unterwegs Bucketlist-Tracking ermöglichen.",
+      "status": "planned",
+      "priority": "high",
+      "category": "Tech-Projekte",
+      "progress": 0,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "tech",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 3,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "cd8b915c-e4ca-43ad-8f8c-df02e139dad6",
+      "title": "Ein Gaming-Zimmer für mich und meine Frau kreieren",
+      "description": "Gemütlicher Raum für gemeinsame Gaming-Sessions. Zwei Gaming-Stühle, großer Monitor, RGB-Beleuchtung und alles was dazugehört.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Kreative Projekte",
+      "progress": 25,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "creative",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 4,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "72b5a966-8c19-44ac-8ffb-3686d2331896",
+      "title": "Mein eigenes Körpergewicht 3x sauber beim Bankdrücken heben können",
+      "description": "Aktuell bei ca. 2x Körpergewicht. Systematisches Training mit Trainingsplan, Ernährungsoptimierung und Progression tracking.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Persönliche Challenges",
+      "progress": 70,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "personal",
+        "priority",
+        "fitness"
+      ],
+      "resources": {
+        "legacy_id": 5,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "eb1e3967-e876-493e-b184-c28d8aa36f68",
+      "title": "Japanisch lernen N3 Niveau",
+      "description": "Von Grundlagen bis N3-Niveau durch strukturierten Sprachkurs, Anime/Manga und Konversationspraxis. Vorbereitung für Japan-Reise.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Lernen & Bildung",
+      "progress": 20,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "learning",
+        "priority",
+        "japan"
+      ],
+      "resources": {
+        "legacy_id": 6,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2026",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "0f37c141-51a8-4e61-bbff-d82e05065b69",
+      "title": "Die Liebe meines Lebens finden",
+      "description": "Mission erfolgreich abgeschlossen! Die perfekte Partnerin gefunden und gemeinsam das Leben aufgebaut.",
+      "status": "completed",
+      "priority": "high",
+      "category": "Große Lebensziele",
+      "progress": 100,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": "2025-08-03",
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "completed",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 7,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "Abgeschlossen",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "9d5e4bd2-a5e1-4d7b-b042-90723a7a11d3",
+      "title": "Ein eigenes Haus kaufen",
+      "description": "Eigenheim erworben! Unser 'Bergkabuff' ist jetzt Realität - der perfekte Ort für alle weiteren Projekte.",
+      "status": "completed",
+      "priority": "high",
+      "category": "Große Lebensziele",
+      "progress": 100,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": "2025-08-03",
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "completed",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 8,
+        "migrated_at": "2025-08-03T13:13:24.810Z",
+        "original_data": {
+          "status": "Abgeschlossen",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "98df6dfc-0d20-4e09-87d9-1ce7bf1c8de6",
+      "title": "Einen Hund großziehen",
+      "description": "Unser Hund wurde erfolgreich großgezogen und ist ein vollwertiges Familienmitglied geworden.",
+      "status": "completed",
+      "priority": "high",
+      "category": "Persönliche Challenges",
+      "progress": 100,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": "2025-08-03",
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "personal",
+        "completed",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 9,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Abgeschlossen",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "2989ea60-bb34-4a27-af1d-349dda28c65c",
+      "title": "Ein Slipknot-Konzert besuchen",
+      "description": "Unvergessliches Konzert erlebt! Die Energie und Musik waren genau so episch wie erwartet.",
+      "status": "completed",
+      "priority": "high",
+      "category": "Besondere Erlebnisse",
+      "progress": 100,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": "2025-08-03",
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "completed",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 10,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Abgeschlossen",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "2b60b184-e560-4bb2-889f-c4e980fc3f0e",
+      "title": "Einen Baum pflanzen",
+      "description": "Baum gepflanzt und damit einen kleinen Beitrag für die Umwelt geleistet.",
+      "status": "completed",
+      "priority": "high",
+      "category": "Persönliche Challenges",
+      "progress": 100,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": "2025-08-03",
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2025",
+        "personal",
+        "completed",
+        "priority"
+      ],
+      "resources": {
+        "legacy_id": 11,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Abgeschlossen",
+          "deadline": "31. Dezember 2025",
+          "priority": "Hoch"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "feffcc96-b361-455b-a060-03148633a67f",
+      "title": "Japan besuchen",
+      "description": "Traumreise nach Japan zur Kirschblütenzeit. Tokyo, Kyoto, Osaka erkunden und die Kultur vollständig erleben.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "travel",
+        "japan"
+      ],
+      "resources": {
+        "legacy_id": 12,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "67906409-5de3-4d6f-a6d1-b39cef1f3135",
+      "title": "Jedes Land in Europa besuchen",
+      "description": "Jedes Land in Europa besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "in_progress",
+      "priority": "low",
+      "category": "Reisen & Abenteuer",
+      "progress": 38,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 13,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "e4c629e9-c683-484d-9ec7-3890014e1842",
+      "title": "Den rechten Arm sleeven lassen",
+      "description": "Den rechten Arm sleeven lassen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "in_progress",
+      "priority": "medium",
+      "category": "Persönliche Challenges",
+      "progress": 30,
+      "deadline": "2028-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 14,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2028",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "bdd20658-e7a8-4092-bc34-fe3469c97a77",
+      "title": "Das Wiehengebirge durchwandern",
+      "description": "Das Wiehengebirge durchwandern - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "in_progress",
+      "priority": "medium",
+      "category": "Persönliche Challenges",
+      "progress": 25,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 15,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "In Arbeit",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "5136ec9a-ab6a-4259-9795-edbd5a3a67bc",
+      "title": "Eine Bahn im Schwimmbad ohne Hilfe schwimmen",
+      "description": "Eine Bahn im Schwimmbad ohne Hilfe schwimmen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Persönliche Challenges",
+      "progress": 25,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 16,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "550fa072-17d7-43ca-a192-5d4d163cfb13",
+      "title": "Ein eigenes Klemmbausteinset entwerfen",
+      "description": "Ein eigenes Klemmbausteinset entwerfen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 17,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "732a2db7-f25f-4b16-b73f-e56d27900672",
+      "title": "Ein Buch schreiben und veröffentlichen",
+      "description": "Ein Buch schreiben und veröffentlichen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 18,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "e3dccc5e-8bc8-40e3-8f2e-bdf8ee6624d8",
+      "title": "Einen Lamborghini selber fahren",
+      "description": "Einen Lamborghini selber fahren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 19,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "fd03cb59-2b6e-4874-a863-62775b376ae1",
+      "title": "Einen sauberen Handstand 10s halten",
+      "description": "Einen sauberen Handstand 10s halten - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Persönliche Challenges",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 20,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "86596380-8db0-486e-80c4-4ed5da2fc101",
+      "title": "Eine Woche Digital Detox durchziehen",
+      "description": "Eine Woche Digital Detox durchziehen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Persönliche Challenges",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 21,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "cdbf376f-cf2a-483b-8399-fcc1c68f08c3",
+      "title": "Ein vollständiges Lied auf dem Klavier lernen",
+      "description": "Ein vollständiges Lied auf dem Klavier lernen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Lernen & Bildung",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "learning"
+      ],
+      "resources": {
+        "legacy_id": 22,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "f6619759-4254-4e9b-82c6-1ca85fedf195",
+      "title": "Eine Wintersportart ausprobieren",
+      "description": "Eine Wintersportart ausprobieren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Persönliche Challenges",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 23,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "ccc86aa8-e813-47e9-9ab1-75b36e1faa21",
+      "title": "Mit dem Fahrrad zur Nordsee fahren",
+      "description": "Mit dem Fahrrad zur Nordsee fahren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 24,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "e9b9ed32-4883-4675-9734-3db0b3081414",
+      "title": "Ein Bild/Gemälde malen",
+      "description": "Ein Bild/Gemälde malen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 25,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "6231ab8a-44ad-4a5e-b2ab-239ec09ab156",
+      "title": "Ein eigenes Gericht kreieren, benennen und veröffentlichen",
+      "description": "Ein eigenes Gericht kreieren, benennen und veröffentlichen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 26,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "bb73c87a-e693-4b1c-bdc9-dbfb0ef90945",
+      "title": "In einem Rennwagen auf der Rennstrecke mitfahren",
+      "description": "In einem Rennwagen auf der Rennstrecke mitfahren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027"
+      ],
+      "resources": {
+        "legacy_id": 27,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "a13dfa4a-1b7d-4d5a-8bc5-f67cc5eb461d",
+      "title": "In einem Rallye-Auto mitfahren",
+      "description": "In einem Rallye-Auto mitfahren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 28,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "5db198b3-5852-4865-affa-ba44888c785e",
+      "title": "Auf die Zugspitze",
+      "description": "Auf die Zugspitze - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 29,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "ec598836-5b75-480b-a8ad-1e0247aa6e4c",
+      "title": "Einen Kinky Club besuchen",
+      "description": "Einen Kinky Club besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027"
+      ],
+      "resources": {
+        "legacy_id": 30,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "e5cbcd4a-895a-4683-bd73-9bacecf668fa",
+      "title": "Einen Stand-Up Auftritt machen",
+      "description": "Einen Stand-Up Auftritt machen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Persönliche Challenges",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 31,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "3a410e61-2d7f-4483-8e01-2e116b051e6e",
+      "title": "Einen eigenen Song schreiben, erstellen und veröffentlichen",
+      "description": "Einen eigenen Song schreiben, erstellen und veröffentlichen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 32,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "b2667861-71c4-413c-a573-30e4c8a3876f",
+      "title": "Ein eigenes Videospiel erstellen und veröffentlichen",
+      "description": "Ein eigenes Videospiel erstellen und veröffentlichen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Tech-Projekte",
+      "progress": 0,
+      "deadline": "2026-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2026",
+        "tech"
+      ],
+      "resources": {
+        "legacy_id": 33,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2026",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "13c3e865-0cfc-4c55-9d82-24cd5a384dde",
+      "title": "Singapur besuchen",
+      "description": "Singapur besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 34,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "4d509fa3-bb15-42ac-98b5-6e3cdd608961",
+      "title": "In einem guten Molekularküche-Restaurant essen gehen",
+      "description": "In einem guten Molekularküche-Restaurant essen gehen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027"
+      ],
+      "resources": {
+        "legacy_id": 35,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "1cd33145-2739-4bd5-a453-1adbe27a775a",
+      "title": "Die Polarlichter sehen",
+      "description": "Die Polarlichter sehen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 36,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "2e1a2690-b595-4731-b810-d5465383da25",
+      "title": "Den Polarkreis überqueren",
+      "description": "Den Polarkreis überqueren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 37,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "076f784a-0784-4caa-9169-fedb242ffa4b",
+      "title": "Ein Korn-Konzert besuchen",
+      "description": "Ein Korn-Konzert besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027"
+      ],
+      "resources": {
+        "legacy_id": 38,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "642bd052-c92f-4b47-8aee-6bf6b463d7a5",
+      "title": "Eine Woche autark in einer Waldhütte wohnen",
+      "description": "Eine Woche autark in einer Waldhütte wohnen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 39,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "28543570-0a2b-410d-b3db-de46cbea8643",
+      "title": "Eine KZ-Gedenkstätte besuchen",
+      "description": "Eine KZ-Gedenkstätte besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Reisen & Abenteuer",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027",
+        "travel"
+      ],
+      "resources": {
+        "legacy_id": 40,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "1181aef8-6c4b-4bfd-a558-a988fa5ea353",
+      "title": "Einen eigenen Whirlpool besitzen",
+      "description": "Einen eigenen Whirlpool besitzen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Große Lebensziele",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 41,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "90d87a63-e3d3-4862-8dbf-18f088449e35",
+      "title": "Ein eigenes Comic erstellen",
+      "description": "Ein eigenes Comic erstellen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 42,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "0cc43997-3fc6-495d-a85d-a01754e0540b",
+      "title": "Eine Umweltaktion organisieren",
+      "description": "Eine Umweltaktion organisieren - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "medium",
+      "category": "Große Lebensziele",
+      "progress": 0,
+      "deadline": "2027-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2027"
+      ],
+      "resources": {
+        "legacy_id": 43,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2027",
+          "priority": "Mittel"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "0627082e-5081-4a4a-b2a8-ec00843761af",
+      "title": "Ein Gedicht schreiben",
+      "description": "Ein Gedicht schreiben - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Kreative Projekte",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "creative"
+      ],
+      "resources": {
+        "legacy_id": 44,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "34dcc078-4a2b-43dc-a359-540b1f9cd8b7",
+      "title": "3-Tage Survival ohne Vorräte",
+      "description": "3-Tage Survival ohne Vorräte - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Persönliche Challenges",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030",
+        "personal"
+      ],
+      "resources": {
+        "legacy_id": 45,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "0b68a700-8679-4729-8605-ef5db7ec05ba",
+      "title": "Eine Oper besuchen",
+      "description": "Eine Oper besuchen - Detaillierte Planung und Umsetzung als Teil der Bergkabuff-Journey.",
+      "status": "planned",
+      "priority": "low",
+      "category": "Besondere Erlebnisse",
+      "progress": 0,
+      "deadline": "2030-12-31",
+      "created_at": "2025-08-03T13:13:24.820402+00:00",
+      "updated_at": "2025-08-03T13:13:24.820402+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "2030"
+      ],
+      "resources": {
+        "legacy_id": 46,
+        "migrated_at": "2025-08-03T13:13:24.811Z",
+        "original_data": {
+          "status": "Geplant",
+          "deadline": "31. Dezember 2030",
+          "priority": "Niedrig"
+        }
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "e3fa3b2e-26ee-45b8-9a5e-a48981a3507f",
+      "title": "Einen Youtube Kanal starten und ein gut editiertes Video hochladen",
+      "description": "Professioneller YouTube-Kanal mit regelmäßigen Videos über die Bucketlist-Reise. Erstes Video soll mindestens 1000 Aufrufe erreichen.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Kreative Projekte",
+      "progress": 60,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:10:22.236353+00:00",
+      "updated_at": "2025-08-03T13:10:22.236353+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "test",
+        "migration"
+      ],
+      "resources": {
+        "legacy_id": 2,
+        "migrated_at": "2025-08-03T13:10:22.061Z"
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "c05e1311-1e99-45ca-946a-1ef7e815600a",
+      "title": "Die Liebe meines Lebens finden",
+      "description": "Mission erfolgreich abgeschlossen! Die perfekte Partnerin gefunden und gemeinsam das Leben aufgebaut.",
+      "status": "completed",
+      "priority": "high",
+      "category": "Große Lebensziele",
+      "progress": 100,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:10:22.236353+00:00",
+      "updated_at": "2025-08-03T13:10:22.236353+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "test",
+        "migration"
+      ],
+      "resources": {
+        "legacy_id": 7,
+        "migrated_at": "2025-08-03T13:10:22.061Z"
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    },
+    {
+      "id": "eaa6995f-ec60-4683-ae9b-1db982c00dcb",
+      "title": "Eine Website erstellen und veröffentlichen",
+      "description": "Vollständige Entwicklung einer interaktiven Website mit React, modernem Design und Hosting. Das Bergkabuff-Projekt als digitale Heimat.",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Tech-Projekte",
+      "progress": 85,
+      "deadline": "2025-12-31",
+      "created_at": "2025-08-03T13:10:22.236353+00:00",
+      "updated_at": "2025-08-03T13:10:22.236353+00:00",
+      "estimated_duration_days": null,
+      "actual_start_date": null,
+      "completion_date": null,
+      "difficulty_level": null,
+      "is_public": true,
+      "notion_page_id": null,
+      "youtube_video_id": null,
+      "tags": [
+        "test",
+        "migration"
+      ],
+      "resources": {
+        "legacy_id": 1,
+        "migrated_at": "2025-08-03T13:10:22.060Z"
+      },
+      "reflection": null,
+      "view_count": 0,
+      "like_count": 0,
+      "share_count": 0
+    }
+  ]
+}
