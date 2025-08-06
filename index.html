@@ -113,17 +113,38 @@
   <link rel="dns-prefetch" href="//www.googletagmanager.com" />
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
-  <!-- Hier kommt später Google Analytics -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-    -->
+  <!-- Google Analytics mit ENV Variable -->
+  <script>
+    // Google Tag Manager / Analytics Consent Mode
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    // Default to denied - wichtig für DSGVO!
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied'
+    });
+
+    // GA4 ID aus Environment Variable
+    const GA4_ID = '%VITE_GA_MEASUREMENT_ID%';
+
+    gtag('js', new Date());
+    if (GA4_ID && GA4_ID !== '%VITE_GA_MEASUREMENT_ID%') {
+      gtag('config', GA4_ID);
+    }
+  </script>
+  
+  <!-- Async Google Analytics laden mit ENV Variable -->
+  <script>
+    // Dynamisch laden nur wenn ID verfügbar
+    const GA4_ID = '%VITE_GA_MEASUREMENT_ID%';
+    if (GA4_ID && GA4_ID !== '%VITE_GA_MEASUREMENT_ID%') {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
+      document.head.appendChild(script);
+    }
+  </script>
 </head>
 
 <body>

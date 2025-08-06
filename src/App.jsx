@@ -2,6 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { goalHelpers } from "../lib/goalHelpers";
 import { notionSync } from "../lib/notionSync";
+import CookieBanner from "./components/Legal/CookieBanner";
+import LegalPages from "./components/Legal/LegalPages";
 
 // CSS Reset für Browser-Standards
 const globalStyles = `
@@ -377,6 +379,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showYouTubeModal, setShowYouTubeModal] = useState(false);
+  const [showLegalPage, setShowLegalPage] = useState(null);
 
   // Sync State
   const [syncing, setSyncing] = useState(false);
@@ -1639,6 +1642,67 @@ function App() {
           textAlign: "center",
         }}
       >
+        {/* NEU: Rechtliche Links */}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "24px",
+            marginBottom: "16px",
+            flexWrap: "wrap",
+          }}
+        >
+          <button
+            onClick={() => setShowLegalPage("impressum")}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#86868b",
+              fontSize: "12px",
+              textDecoration: "none",
+              cursor: "pointer",
+              transition: "color 0.2s ease",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#007aff")}
+            onMouseLeave={(e) => (e.target.style.color = "#86868b")}
+          >
+            Impressum
+          </button>
+          <button
+            onClick={() => setShowLegalPage("datenschutz")}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#86868b",
+              fontSize: "12px",
+              textDecoration: "none",
+              cursor: "pointer",
+              transition: "color 0.2s ease",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#007aff")}
+            onMouseLeave={(e) => (e.target.style.color = "#86868b")}
+          >
+            Datenschutz
+          </button>
+          <button
+            onClick={() => setShowLegalPage("cookies")}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#86868b",
+              fontSize: "12px",
+              textDecoration: "none",
+              cursor: "pointer",
+              transition: "color 0.2s ease",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#007aff")}
+            onMouseLeave={(e) => (e.target.style.color = "#86868b")}
+          >
+            Cookies
+          </button>
+        </div>
+
+        {/* Bestehender Footer Text */}
         <p
           style={{
             fontSize: "12px",
@@ -1663,6 +1727,87 @@ function App() {
         isOpen={showYouTubeModal}
         onClose={() => setShowYouTubeModal(false)}
       />
+
+      {/* NEU: Legal Pages Modal */}
+      {showLegalPage && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "20px",
+            overflow: "auto",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#ffffff",
+              borderRadius: "18px",
+              width: "100%",
+              maxWidth: "900px",
+              maxHeight: "90vh",
+              overflow: "hidden",
+              position: "relative",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setShowLegalPage(null)}
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                color: "#86868b",
+                border: "1px solid #d2d2d7",
+                borderRadius: "50%",
+                width: "36px",
+                height: "36px",
+                fontSize: "18px",
+                cursor: "pointer",
+                zIndex: 1001,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = "#f5f5f7";
+                e.target.style.color = "#1d1d1f";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+                e.target.style.color = "#86868b";
+              }}
+              title="Schließen"
+            >
+              ×
+            </button>
+
+            {/* Legal Pages Content */}
+            <div
+              style={{
+                flex: 1,
+                overflow: "auto",
+              }}
+            >
+              <LegalPages initialTab={showLegalPage} />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Cookie Banner */}
+      <CookieBanner />
     </div>
   );
 }
